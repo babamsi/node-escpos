@@ -4,11 +4,7 @@ const Types = require('../node-thermal-printer').types;
 async function testConnection() {
   const printer = new ThermalPrinter({
     type: Types.EPSON,
-    interface: 'tcp://192.168.0.105:9100',
-    options: {
-      timeout: 10000, // Increase timeout to 10 seconds
-      debug: true,    // Enable debug mode to see connection details
-    },
+    interface: 'COM1',
   });
 
   try {
