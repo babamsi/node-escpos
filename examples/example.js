@@ -1,9 +1,9 @@
 const { ThermalPrinter, PrinterTypes, CharacterSet, BreakLine } = require('../node-thermal-printer');
 
-async function example () {
+async function example() {
   const printer = new ThermalPrinter({
     type: PrinterTypes.EPSON, // 'star' or 'epson'
-    interface: process.argv[2],
+    interface: 'tcp://192.168.0.147',
     options: {
       timeout: 1000,
     },
